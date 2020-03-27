@@ -1,0 +1,27 @@
+﻿<Window x:Class="PZ1_RG.ImageSize"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PZ1_RG"
+        mc:Ignorable="d"
+        Title="ImageSize" Height="150" Width="180" ResizeMode="CanMinimize">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" >
+                <Label Name="lbHeight" Content="Heignt" Height="30" Width="60" Margin="10,4,0,0" />
+                <TextBox Name="tbHeight" Height="30" Width="60" Margin="15,4,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Name="lbWidth" Content="Width" Height="30" Width="60" Margin="10,4,0,0"/>
+                <TextBox Name="tbWidth" Height="30" Width="60" Margin="15,4,0,0"/>
+            </StackPanel>
+           
+            <StackPanel Orientation="Horizontal">
+                <Button Name="btCancel" Content="Cancel" Height="30" Width="60" Margin="5,4,0,0" Click="BtCancel_Click"/>
+                <Button Name="btDraw" Content="AddImage"  Height="30" Width="60" Margin="20,4,0,0" Click="BtDraw_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>

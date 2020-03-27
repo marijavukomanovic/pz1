@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PZ1_RG"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
-</Window>
+        Title="MainWindow" Height="450" Width="600" ResizeMode="CanMinimize">
+    <Window.CommandBindings>
+        <CommandBinding Command="local:RoutedCommands.Ellipse" CanExecute="Ellipse_CanExecute" Executed="Ellipse_Executed"/>
+        <CommandBinding Command="local:RoutedCommands.Rectangle" CanExecute="Rectangle_CanExecute" Executed="Rectangle_Executed"/>
+        <CommandBinding Command="local:RoutedCommands.Polygon" CanExecute="Polygon_CanExecute" Executed="Polygon_Executed"/>
+        <CommandBinding Command="local:RoutedCommands.Image" CanExecute="Image_CanExecute" Executed="Image_Executed"/>
+        <CommandBinding Command="local:RoutedCommands.Redo" CanExecute="Redo_CanExecute" Executed="Redo_Executed"/>
+        <CommandBinding Command="local:RoutedCommands.Undo" CanExecute="Undo_CanExecute" Executed="Undo_Executed"/>
+        <CommandBinding Command="local:RoutedCommands.Clear" CanExecute="Clear_CanExecute" Executed="Clear_Executed"/>
+    </Window.CommandBindings>
+    <DockPanel>
+        <ToolBar Name="MyToolBar" DockPanel.Dock="Top" Height="50">
+            <RadioButton Name="btnEllipse" Background="#FF969696" Content="Ellipse" Height="50" Width="80" ClickMode="Press"  GroupName="ShapeGroup"  Command="local:RoutedCommands.Ellipse"/>
+            <RadioButton Name="btnRectangle" Background="#FF969696" Content="Rectangle" Height="50" Width="80" GroupName="ShapeGroup"  Command="local:RoutedCommands.Rectangle"/>
+            <RadioButton Name="btnPolygon" Background="#FF969696" Content="Polygon" Height="50" Width="80" GroupName="ShapeGroup" Command="local:RoutedCommands.Polygon"/>
+            <RadioButton Name="btnImage" Background="#FF969696" Content="Image" Height="50" Width="80" GroupName="ShapeGroup" Command="local:RoutedCommands.Image"/>
+            <RadioButton Name="btnUndo" Background="#FF969696" Content="Undo" Height="50" Width="80" GroupName="ShapeGroup" Command="local:RoutedCommands.Undo"/>
+            <RadioButton Name="btnRedo" Background="#FF969696" Content="Redo" Height="50" Width="80" GroupName="ShapeGroup" Command="local:RoutedCommands.Redo"/>
+            <RadioButton Name="btnClear" Background="#FF969696" Content="Clear" Height="50" Width="80" GroupName="ShapeGroup" Command="local:RoutedCommands.Clear"/>
+        </ToolBar>
+        <Canvas Name="MyCanvas" Height="380" Width="600" Background="WhiteSmoke" MouseRightButtonDown="MyCanvas_MouseRightButtonDown" MouseLeftButtonDown="MyCanvas_MouseLeftButtonDown" >
+            
+        </Canvas>
+    </DockPanel>
+   </Window>

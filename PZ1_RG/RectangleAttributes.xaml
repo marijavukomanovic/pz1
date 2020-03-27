@@ -1,0 +1,53 @@
+﻿<Window x:Class="PZ1_RG.RectangleAttributes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:PZ1_RG"
+        mc:Ignorable="d"
+        Title="RectangleAttributes" Height="260" Width="220" ResizeMode="CanMinimize">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" >
+                <Label Name="lbHeight" Content="Heignt" Height="30" Width="60" Margin="0,4,0,0" />
+                <TextBox Name="tbHeight" Height="30" Width="60" Margin="60,4,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Name="lbWidth" Content="Width" Height="30" Width="60" Margin="0,4,0,0"/>
+                <TextBox Name="tbWidth" Height="30" Width="60" Margin="60,4,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Name="lbFillColor" Content="FillColor" Height="30" Width="60" Margin="0,4,0,0"/>
+                <!--<ComboBox Name="cmbFillColor" Height="30" Width="60" Margin="60,4,0,0"/>-->
+                <xctk:ColorPicker x:Name="FillColor" 
+                        Height="30"
+                        Width="60"
+                        ShowAvailableColors="true"
+                        Margin="60,0,0,0"
+                        ToolTip="Choose a fill color"
+                        SelectedColor="BlueViolet"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Name="lbBorderColor" Content="BorderColor" Height="30" Width="80" Margin="0,4,0,0"/>
+                <!--<ComboBox Name="cmbBorderColor" Height="30" Width="60" Margin="40,4,0,0"/>-->
+                <xctk:ColorPicker
+                        x:Name="BorderColor"
+                        Height="30"
+                        Width="60"
+                        ShowAvailableColors="true"
+                        Margin="40,0,0,0"
+                        ToolTip="Choose a  color border"
+                        SelectedColor="MediumVioletRed" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Name="lbBorderThickness" Content="BorderThickness" Height="30" Width="100" Margin="0,4,0,0"/>
+                <TextBox Name="tbBorderThickness" Height="30" Width="60" Margin="20,4,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Name="btCancel" Content="Cancel" Height="30" Width="60" Margin="10,4,0,0" Click="BtCancel_Click"/>
+                <Button Name="btDraw" Content="Draw"  Height="30" Width="60" Margin="50,4,0,0" Click="BtDraw_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
